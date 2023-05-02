@@ -1,5 +1,3 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === 'Apache License 2.0') {
     return '![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)';
@@ -12,8 +10,6 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === 'Apache License 2.0') {
     return 'https://opensource.org/licenses/Apache-2.0';
@@ -26,8 +22,6 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license) {
     return `
@@ -40,15 +34,14 @@ This project is licensed under the ${license} - see the [LICENSE.md](${renderLic
   }
 }
 
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title} ${renderLicenseBadge(data.license)}
+function generateMD(response) {
+  return `# ${response.title} ${renderLicenseBadge(response.license)}
 
 ## Description
 
-${data.description}
+${response.description}
 
-${renderLicenseSection(data.license)}
+${renderLicenseSection(response.license)}
 
 ## Table of Contents
 
@@ -60,47 +53,24 @@ ${renderLicenseSection(data.license)}
 
 ## Installation
 
-${data.install}
+${response.install}
 
 ## Usage
 
-${data.usage}
+${response.usage}
 
 ## Contributing
 
-${data.contribution}
+${response.contribution}
 
 ## Tests
 
-${data.tests}
+${response.tests}
 
 ## Questions
 
-${data.questions}
+${response.questions}
 `;
 }
 
-module.exports = generateMarkdown;
-
-
-
-
-
-
-// ## Title
-
-// ## Description
-
-// ## Table of Contents
-
-// ## Installation instructions
-
-// ## Usage
-
-// ## License
-
-// ## Contributors
-
-// ## Tests 
-
-// ## Questions
+module.exports = generateMD;
