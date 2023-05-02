@@ -1,8 +1,8 @@
-# Hello ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+# Module 9 ReadMeGen ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
 
-Best project ever
+Generates a MD file based on given fields
 
 
 ## License
@@ -20,20 +20,20 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://op
 
 ## Installation
 
-F
+N/A
 
 ## Usage
 
-F
+To generate a readme file for any application
 
 ## Contributing
 
-fssdfadf
+Christian, Smith, github.com/christian6404
 
 ## Tests
 
-dwadwa
+N/A
 
 ## Questions
 
-saddsa
+What did you use to build this project? It was all made using NodeJS
