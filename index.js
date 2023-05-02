@@ -49,32 +49,34 @@ const questions = [
 ];
 
 inquirer.prompt(questions)
-    .then((userInput) => {
-        console.log(userInput);
-        const markdownContent = generateMarkdown(userInput.title);
-        console.log(markdownContent);
-    });
+  .then((userInput) => {
+    const markdownContent = generateMarkdown(userInput);
+    writeToFile('README.md', markdownContent); // write generated markdown to file
+  });
 
-generateMarkdown()
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-        fs.writeFile(fileName, data, (err) => {
-          if (err) {
-            console.error(err);
-          } else {
-            console.log(`Successfully wrote ${fileName}`);
-          }
-        });
+    fs.writeFile(fileName, data, (err) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log(`Successfully wrote ${fileName}`);
       }
-
-
-// TODO: Create a function to initialize app
-function init() {
-
-}
-
-// Function call to initialize app
-init();
+    });
+  }
+  
+  // TODO: Create a function to initialize app
+  function init() {
+    inquirer.prompt(questions)
+      .then((userInput) => {
+        console.log(userInput);
+        const markdownContent = generateMarkdown(userInput);
+        writeToFile('README.md', markdownContent);
+      });
+  }
+  
+  // Function call to initialize app
+  init();
 
 
 
