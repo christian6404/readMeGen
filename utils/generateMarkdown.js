@@ -1,36 +1,36 @@
 function renderLicenseBadge(license) {
   if (license === 'Apache License 2.0') {
-    return '![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)';
+     return '![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)';
   } else if (license === 'MIT License') {
-    return '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
+     return '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
   } else if (license === 'GNU General Public License 3.0') {
-    return '![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)';
+     return '![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)';
   } else {
-    return '';
+     return '';
   }
 }
 
 function renderLicenseLink(license) {
   if (license === 'Apache License 2.0') {
-    return 'https://opensource.org/licenses/Apache-2.0';
+     return 'https://opensource.org/licenses/Apache-2.0';
   } else if (license === 'MIT License') {
-    return 'https://opensource.org/licenses/MIT';
+     return 'https://opensource.org/licenses/MIT';
   } else if (license === 'GNU General Public License 3.0') {
-    return 'https://www.gnu.org/licenses/gpl-3.0';
+     return 'https://www.gnu.org/licenses/gpl-3.0';
   } else {
-    return '';
+     return '';
   }
 }
 
 function renderLicenseSection(license) {
   if (license) {
-    return `
+     return `
 ## License
 
 This project is licensed under the ${license} - see the [LICENSE.md](${renderLicenseLink(license)}) file for details.
 `;
   } else {
-    return '';
+     return '';
   }
 }
 
