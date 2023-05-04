@@ -23,7 +23,7 @@ function renderLicenseLink(license) { // generates the link for more info
 }
 
 function renderLicenseSection(license) {
-  if (license = 'Apache License 2.0' || 'MIT license' || 'GNU General Public License 3.0') {
+  if (license) {
      return `
 ## License
 
