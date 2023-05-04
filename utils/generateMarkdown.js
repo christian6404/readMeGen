@@ -1,4 +1,4 @@
-function renderLicenseBadge(license) {
+function renderLicenseBadge(license) { //generates the image of the badge
   if (license === 'Apache License 2.0') {
      return '![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)';
   } else if (license === 'MIT License') {
@@ -10,7 +10,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-function renderLicenseLink(license) {
+function renderLicenseLink(license) { // generates the link for more info
   if (license === 'Apache License 2.0') {
      return 'https://opensource.org/licenses/Apache-2.0';
   } else if (license === 'MIT License') {
@@ -23,13 +23,13 @@ function renderLicenseLink(license) {
 }
 
 function renderLicenseSection(license) {
-  if (license) {
+  if (license = 'Apache License 2.0' || 'MIT license' || 'GNU General Public License 3.0') {
      return `
 ## License
 
 This project is licensed under the ${license} - see the [LICENSE.md](${renderLicenseLink(license)}) file for details.
 `;
-  } else {
+  } else if (license === 'None'){
      return '';
   }
 }

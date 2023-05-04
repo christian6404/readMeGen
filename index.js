@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
+
 const questionsAndAnswers = [{
       type: 'input',
       message: 'What is the Title of your project?',
@@ -13,7 +14,7 @@ const questionsAndAnswers = [{
    },
    {
       type: 'input',
-      message: 'Give a explanation if there are any installation instructions, if none leave empty',
+      message: 'Give a explanation if there are any installation instructions, if none N/A',
       name: 'install',
    },
    {
@@ -24,7 +25,7 @@ const questionsAndAnswers = [{
    {
       type: 'list',
       message: 'Which license would you like to include?',
-      choices: ['Apache License 2.0', 'MIT License', 'GNU General Public License 3.0'],
+      choices: ['Apache License 2.0', 'MIT License', 'GNU General Public License 3.0', 'None'],
       name: 'license',
    },
    {
@@ -34,7 +35,7 @@ const questionsAndAnswers = [{
    },
    {
       type: 'input',
-      message: 'What are the test that you used for your application? ',
+      message: 'What are the test that you used for your application? If none N/A',
       name: 'tests',
    },
    {
@@ -43,12 +44,6 @@ const questionsAndAnswers = [{
       name: 'questions',
    },
 ];
-
-inquirer.prompt(questionsAndAnswers).then((input) => {
-   console.log(input);
-   const md = generateMarkdown(input);
-   writeToFile('README.md', md);
-});
 
 function writeToFile(fileName, data) {
    fs.writeFile(fileName, data, (err) => {
@@ -65,7 +60,7 @@ function init() {
       .then((input) => {
          console.log(input);
          const markdownContent = generateMarkdown(input);
-         writeToFile('README.md', markdownContent);
+         writeToFile('README.md', markdownContent); // uses function above to take data provided and write to the markdown file
       });
 }
 init();

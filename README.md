@@ -1,13 +1,13 @@
-# Module 9 ReadMeGen ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+# ReadMeGenerator ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
 
-Generates a MD file based on given fields
+Generates a markdown file
 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://opensource.org/licenses/MIT) file for details.
+This project is licensed under the Apache License 2.0 - see the [LICENSE.md](https://opensource.org/licenses/Apache-2.0) file for details.
 
 
 ## Table of Contents
@@ -20,15 +20,15 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://op
 
 ## Installation
 
-N/A
+Download the REQUIRED npm packages in the index.js file. Use node to run the index.js file and Input text into the console
 
 ## Usage
 
-To generate a readme file for any application
+Can be used to generate a readme file for any project 
 
 ## Contributing
 
-Christian, Smith, github.com/christian6404
+Christian, Smith, christian6404
 
 ## Tests
 
@@ -36,4 +36,4 @@ N/A
 
 ## Questions
 
-What did you use to build this project? It was all made using NodeJS
+Question:What was used to complete this project Answer: I used Node in JS and 2 npm packages one being inquirer and the other being FS.
